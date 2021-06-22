@@ -1,0 +1,27 @@
+.profile {
+  padding: 5pt;
+  margin-bottom: 2pt;
+  margin-left: 2pt;
+  color: #222222;
+}
+
+.profile-short {
+  font-weight: bold;
+}
+
+.appl {
+  background-color: cadetblue;
+}
+
+.sys {
+  background-color: indianred;
+}
+
+.wayup {
+  background-color: lightgreen;
+}
+
+
+.pibs {
+  background-color: khaki;
+}

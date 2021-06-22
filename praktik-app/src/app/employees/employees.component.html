@@ -1,0 +1,12 @@
+<h1>Lernende</h1>
+
+<div *ngFor="let employee of employees">
+  <div class="clr-row">
+    <div class="clr-col-6">
+      <app-employee [employee]="employee"></app-employee>
+    </div>
+    <div class="clr-col-6">
+      <app-job [job]="employee?.job"></app-job>
+    </div>
+  </div>
+</div>

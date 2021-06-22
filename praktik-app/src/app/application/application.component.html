@@ -1,0 +1,12 @@
+<div class="clr-row">
+  <div class="clr-col-4"><app-job [job]="application?.job"></app-job></div>
+  <div class="clr-col-2">{{application?.priorityJob}}</div>
+  <div class="clr-col-3"><app-employee [employee]="application?.employee"></app-employee></div>
+  <div class="clr-col-2">{{application?.priorityEmployee}}</div>
+  <div class="clr-col-1">
+    <span hidden>{{application?.score}}</span>
+    <clr-checkbox-wrapper>
+      <input type="checkbox" clrCheckbox name="options" required value="false" [(ngModel)]="match" />
+    </clr-checkbox-wrapper>
+  </div>
+</div>
