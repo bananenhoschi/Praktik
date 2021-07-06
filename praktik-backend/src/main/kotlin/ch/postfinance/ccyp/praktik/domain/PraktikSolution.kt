@@ -16,20 +16,15 @@ class PraktikSolution {
     @ProblemFactCollectionProperty
     lateinit var jobs: List<Job>
 
-    @ValueRangeProvider(id = "employeeRange")
-    @ProblemFactCollectionProperty
-    lateinit var employees: List<Employee>
-
     @PlanningEntityCollectionProperty
-    lateinit var applications: List<Application>
+    lateinit var employees: List<Employee>
 
     @PlanningScore
     lateinit var score: HardSoftScore
 
-    constructor(jobs: List<Job>, applications: List<Application>, employees: List<Employee>) {
+    constructor(jobs: List<Job>, employees: List<Employee>) {
         this.employees = employees
         this.jobs = jobs
-        this.applications = applications
     }
 
     constructor() {}

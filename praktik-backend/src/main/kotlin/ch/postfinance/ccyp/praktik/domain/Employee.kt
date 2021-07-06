@@ -1,9 +1,12 @@
 package ch.postfinance.ccyp.praktik.domain
 
+import org.optaplanner.core.api.domain.entity.PlanningEntity
 import org.optaplanner.core.api.domain.lookup.PlanningId
+import org.optaplanner.core.api.domain.variable.PlanningVariable
 import javax.persistence.*
 
 @Entity
+@PlanningEntity
 class Employee {
 
     @Id
@@ -16,7 +19,8 @@ class Employee {
 
     @Column(nullable = false)
     lateinit var profile: Profile
-
+    
+    @PlanningVariable(valueRangeProviderRefs = ["jobRange"])
     @OneToOne
     var job: Job? = null
 

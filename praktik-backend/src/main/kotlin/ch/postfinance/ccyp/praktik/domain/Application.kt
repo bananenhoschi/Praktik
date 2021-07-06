@@ -5,18 +5,15 @@ import org.optaplanner.core.api.domain.variable.PlanningVariable
 import javax.persistence.*
 
 @Entity
-@PlanningEntity
 class Application {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null
 
-    @PlanningVariable(valueRangeProviderRefs = ["employeeRange"])
     @ManyToOne
     lateinit var employee: Employee
 
-    @PlanningVariable(valueRangeProviderRefs = ["jobRange"])
     @ManyToOne
     lateinit var job: Job
 

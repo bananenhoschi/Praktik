@@ -49,14 +49,14 @@ class Service {
 
     @Transactional
     fun findById(jobId: Long): PraktikSolution {
-        return PraktikSolution(jobRepository.listAll(), applicationRepository.listAll(), employeeRepository.listAll())
+        return PraktikSolution(jobRepository.listAll(),  employeeRepository.listAll())
     }
 
     @Transactional
     fun save(solution: PraktikSolution) {
-        for (application in solution.applications) {
-            val attachedApplication: Application = applicationRepository.findById(application.id!!)!!
-            attachedApplication.employee.job = application.job
+        for (employee in solution.employees) {
+            val attachedEmplee: Employee = employeeRepository.findById(employee.id!!)!!
+            attachedEmplee.job = employee.job
         }
     }
 
